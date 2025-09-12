@@ -1,0 +1,12 @@
+# Netlify redirects file for Single Page Application (SPA) routing
+# This should be placed in your public folder as "_redirects" (no file extension)
+
+# Handle client-side routing - redirect all requests to index.html
+# The 200 status code tells Netlify to serve index.html but keep the original URL
+/*    /index.html   200
+
+# Optional: Redirect HTTP to HTTPS (uncomment if needed)
+# http://yourdomain.com/*    https://yourdomain.com/:splat  301!
+
+# Optional: Redirect www to non-www (uncomment if needed)
+# https://www.yourdomain.com/*    https://yourdomain.com/:splat  301!
