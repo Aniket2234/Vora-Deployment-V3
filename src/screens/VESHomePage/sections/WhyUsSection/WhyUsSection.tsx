@@ -59,7 +59,7 @@ export const WhyUsSection = (): JSX.Element => {
         </div>
 
         <h2 className="font-semibold text-3xl sm:text-4xl lg:text-5xl tracking-[-1px] sm:tracking-[-1.2px] lg:tracking-[-1.44px] leading-[36px] sm:leading-[48px] lg:leading-[57.6px] transform translate-y-6 opacity-0 animate-[fadeInUp_0.8s_ease-out_0.8s_forwards]">
-          Quality Electrical Services For Any Project
+          Powering Projects with Integrity, Legacy & Innovation
         </h2>
       </div>
 
