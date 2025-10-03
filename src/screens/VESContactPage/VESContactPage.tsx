@@ -1,7 +1,7 @@
 import React, { useState, lazy, Suspense, useEffect } from 'react';
 import { PhoneIcon, MailIcon, MapPinIcon, ClockIcon } from 'lucide-react';
 import { Button } from "../../components/ui/button";
-
+import emailjs from "@emailjs/browser";
 // Import header and footer
 import { HeaderSection } from "../VESHomePage/sections/HeaderSection/HeaderSection";
 const FooterSection = lazy(() => import("../VESHomePage/sections/FooterSection/FooterSection").then(module => ({ default: module.FooterSection })));
@@ -180,17 +180,43 @@ const ContactContent = () => {
         }));
     };
 
+    // const handleSubmit = (e) => {
+    //     e.preventDefault();
+    //     // Handle form submission here
+    //     console.log('Form submitted:', formData);
+    //     alert('Thank you for your message! We will get back to you soon.');
+    //     setFormData({
+    //         name: '',
+    //         email: '',
+    //         phone: '',
+    //         service: '',
+    //         message: ''
+    //     });
+    // };
+
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Handle form submission here
-        console.log('Form submitted:', formData);
-        alert('Thank you for your message! We will get back to you soon.');
-        setFormData({
-            name: '',
-            email: '',
-            phone: '',
-            service: '',
-            message: ''
+    
+        emailjs.send(
+            "service_593zw4s",      // Service ID
+            "template_cmjjwl1",     // Template ID
+            formData,               // Data from state
+            "-muQ7r6gn-ZGEquip"     // Public Key
+        )
+        .then((response) => {
+            console.log("SUCCESS!", response.status, response.text);
+            alert("Thank you for your message! We will get back to you soon.");
+            setFormData({
+                name: '',
+                email: '',
+                phone: '',
+                service: '',
+                message: ''
+            });
+        })
+        .catch((err) => {
+            console.error("FAILED...", err);
+            alert("Oops! Something went wrong. Please try again.");
         });
     };
 
