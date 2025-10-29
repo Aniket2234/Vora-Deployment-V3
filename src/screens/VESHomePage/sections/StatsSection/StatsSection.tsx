@@ -62,7 +62,7 @@ export const StatsSection = () => {
   return (
     <section 
       ref={sectionRef}
-      className="w-full pt-12 pb-8 sm:pt-16 sm:pb-10 overflow-hidden"
+      className="w-full pt-12 pb-4 sm:pt-16 sm:pb-6 overflow-hidden"
     >
       <div className="container mx-auto max-w-7xl px-4 sm:px-6">
         <div 
