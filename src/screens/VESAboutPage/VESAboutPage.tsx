@@ -509,10 +509,14 @@ const CTASection = () => (
 
 // Main About Page Component - Fixed mobile layout
 export const VESAboutPage = ({
-    logoPath,
-    companyImagePath,
-    projectImagePath
-}) => {
+    logoPath = "/images/logo.png",
+    companyImagePath = "/images/fam1.jpg",
+    projectImagePath = "/images/city.png"
+}: {
+    logoPath?: string;
+    companyImagePath?: string;
+    projectImagePath?: string;
+} = {}) => {
     return (
         <div className="relative w-full bg-gray-50 overflow-x-hidden min-h-screen">
             {/* Load navigation header immediately */}

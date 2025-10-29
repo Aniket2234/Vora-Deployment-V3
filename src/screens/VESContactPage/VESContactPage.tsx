@@ -433,7 +433,7 @@ const ContactContent = () => {
 };
 
 // Main Contact Page Component - Fixed mobile layout
-export const VESContactPage = ({ logoPath }) => {
+export const VESContactPage = ({ logoPath = "/images/logo.png" }: { logoPath?: string } = {}) => {
     useEffect(() => {
         // Add smooth scroll behavior to the entire document
         document.documentElement.style.scrollBehavior = 'smooth';
@@ -448,7 +448,7 @@ export const VESContactPage = ({ logoPath }) => {
             <HeaderSection />
 
             {/* Contact page specific header - Added proper top spacing for mobile */}
-            <ContactPageHeader logoPath={logoPath} />
+            <ContactPageHeader />
 
             {/* Main Content */}
             <div className="w-full">
