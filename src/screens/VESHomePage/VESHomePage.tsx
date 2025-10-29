@@ -5,6 +5,7 @@ import { HeroSection } from "./sections/HeroSection";
 // Lazy load all sections except header and hero (which should load immediately)
 const AboutSectionHome = lazy(() => import("./sections/AboutSectionHome/AboutSectionHome"));
 const ServicesSection = lazy(() => import("./sections/ServicesSection").then(module => ({ default: module.ServicesSection })));
+const StatsSection = lazy(() => import("./sections/StatsSection").then(module => ({ default: module.StatsSection })));
 const WhyUsSection = lazy(() => import("./sections/WhyUsSection").then(module => ({ default: module.WhyUsSection })));
 const ProcessSection = lazy(() => import("./sections/ProcessSection").then(module => ({ default: module.ProcessSection })));
 const CaseStudySection = lazy(() => import("./sections/CaseStudySection").then(module => ({ default: module.CaseStudySection })));
@@ -95,6 +96,10 @@ export const VESHomePage = (): JSX.Element => {
 
       <LazySection fallback={<SectionSkeleton height="h-56 sm:h-72 md:h-96" />}>
         <ServicesSection />
+      </LazySection>
+
+      <LazySection fallback={<SectionSkeleton height="h-40 sm:h-48 md:h-56" />}>
+        <StatsSection />
       </LazySection>
 
       <LazySection fallback={<SectionSkeleton height="h-48 sm:h-64 md:h-80" />}>
