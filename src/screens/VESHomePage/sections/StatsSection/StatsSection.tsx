@@ -54,9 +54,9 @@ export const StatsSection = () => {
   }, []);
 
   const stats = [
-    { value: 70, suffix: "+", label: "Projects" },
-    { value: 17, suffix: "+", label: "Years of Experience" },
-    { value: 1000, suffix: "+", label: "Clients" }
+    { value: 60, suffix: "+", label: "Experience" },
+    { value: 2000, suffix: "+", label: "Projects" },
+    { value: 30, suffix: "+", label: "Architects" }
   ];
 
   return (

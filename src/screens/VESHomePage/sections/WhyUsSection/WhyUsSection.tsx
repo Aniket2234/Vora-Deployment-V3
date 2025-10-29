@@ -26,7 +26,7 @@ export const WhyUsSection = (): JSX.Element => {
   ];
 
   return (
-    <section className="w-full py-16 lg:py-32 flex justify-center overflow-hidden">
+    <section className="w-full pt-8 pb-16 lg:pt-12 lg:pb-32 flex justify-center overflow-hidden">
   <div className="container flex flex-col lg:flex-row items-center gap-12 lg:gap-20 px-6 lg:px-10">
     {/* Image Section */}
     <div className="flex-1 w-full flex justify-center transform translate-x-[-50px] opacity-0 animate-[slideInLeft_1s_ease-out_0.2s_forwards]">
