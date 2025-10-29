@@ -75,14 +75,14 @@ export const StatsSection = () => {
                 key={index}
                 className="text-center"
               >
-                <div className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-2">
+                <div className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-2">
                   {isVisible ? (
                     <CountUpAnimation end={stat.value} suffix={stat.suffix} duration={2000} />
                   ) : (
                     `0${stat.suffix}`
                   )}
                 </div>
-                <div className="text-base sm:text-lg lg:text-xl text-white font-medium">
+                <div className="text-base sm:text-lg lg:text-xl text-gray-800 font-medium">
                   {stat.label}
                 </div>
               </div>
