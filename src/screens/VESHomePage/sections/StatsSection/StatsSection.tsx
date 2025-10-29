@@ -64,7 +64,7 @@ export const StatsSection = () => {
       ref={sectionRef}
       className="w-full py-12 sm:py-16 overflow-hidden"
     >
-      <div className="container mx-auto max-w-5xl px-4 sm:px-6">
+      <div className="container mx-auto max-w-7xl px-4 sm:px-6">
         <div 
           className="rounded-3xl shadow-lg p-8 sm:p-12 md:p-16"
           style={{ backgroundColor: "rgba(254, 221, 0, 0.9)" }}
@@ -75,14 +75,14 @@ export const StatsSection = () => {
                 key={index}
                 className="text-center"
               >
-                <div className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-2">
+                <div className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-2">
                   {isVisible ? (
                     <CountUpAnimation end={stat.value} suffix={stat.suffix} duration={2000} />
                   ) : (
                     `0${stat.suffix}`
                   )}
                 </div>
-                <div className="text-base sm:text-lg lg:text-xl text-gray-800 font-medium">
+                <div className="text-base sm:text-lg lg:text-xl text-white font-medium">
                   {stat.label}
                 </div>
               </div>
